@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Class-Path: kotlin-runtime.jar kotlin-reflect.jar poi-3.8-20120326.jar
+  poi-examples-3.8-20120326.jar poi-excelant-3.8-20120326.jar poi-ooxm
+ l-3.8-20120326.jar poi-ooxml-schemas-3.8-20120326.jar poi-scratchpad-
+ 3.8-20120326.jar
+Main-Class: Main
+
