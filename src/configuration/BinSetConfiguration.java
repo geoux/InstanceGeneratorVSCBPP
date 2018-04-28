@@ -14,13 +14,13 @@ public class BinSetConfiguration {
     public List<Double> distributionParameters;
     private int costFuntionType;
     public List<Double> costFuntionParameters;
-    private int lowerBoundType;
-    public List<Integer> lowerBoundParameters;
+    private int UpperBoundType;
+    public List<Integer> UpperBoundParameters;
 
     public BinSetConfiguration() {
         distributionParameters = new ArrayList<>();
         costFuntionParameters = new ArrayList<>();
-        lowerBoundParameters = new ArrayList<>();
+        UpperBoundParameters = new ArrayList<>();
     }
 
     public int getBinsNumber() {
@@ -71,15 +71,15 @@ public class BinSetConfiguration {
         return costFuntionParameters;
     }
 
-    public int getLowerBoundType() {
-        return lowerBoundType;
+    public int getUpperBoundType() {
+        return UpperBoundType;
     }
 
-    public void setLowerBoundType(int lowerBoundType) {
-        this.lowerBoundType = lowerBoundType;
+    public void setUpperBoundType(int UpperBoundType) {
+        this.UpperBoundType = UpperBoundType;
     }
 
-    public List<Integer> getLowerBoundParameters() {
-        return lowerBoundParameters;
+    public List<Integer> getUpperBoundParameters() {
+        return UpperBoundParameters;
     }
 }

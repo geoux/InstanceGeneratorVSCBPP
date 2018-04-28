@@ -75,11 +75,11 @@ public class Main {
                     String setName = "generated/Excel/G"+(binGroup + 1)+"I"+(instanceID + 1)+"N"+itemSet.size()+"B"+binSetConfiguration.getBinsNumber();
                     String mpName = "generated/MathProg/G"+(binGroup + 1)+"I"+(instanceID + 1)+"N"+itemSet.size()+"B"+binSetConfiguration.getBinsNumber()+".dat";
                     String baseExcel = setName+".xls";
-                    ArrayList<Double> lowerBound = new ArrayList<>();
-                    lowerBound.addAll(bg.generateLowerBound(binSetConfiguration,binSetsCapacities.get(binGroup),itemSet));
+                    ArrayList<Double> UpperBound = new ArrayList<>();
+                    UpperBound.addAll(bg.generateUpperBound(binSetConfiguration,binSetsCapacities.get(binGroup),itemSet));
                     ArrayList<Double> binsCost = new ArrayList<>();
-                    binsCost.addAll(bg.generateBinTypeCost(lowerBound,binSetConfiguration.getCostFuntionType(),binSetConfiguration.getCostFuntionParameters()));
-                    ExcelGenerator.writeInExcel(lowerBound,binsCost, itemSet,setName);
+                    binsCost.addAll(bg.generateBinTypeCost(UpperBound,binSetConfiguration.getCostFuntionType(),binSetConfiguration.getCostFuntionParameters()));
+                    ExcelGenerator.writeInExcel(UpperBound,binsCost, itemSet,setName);
                     ExcelTranslator.Translate(baseExcel,mpName);
                     instanceID++;
                 }
@@ -215,8 +215,8 @@ public class Main {
         while (!toEnd){
             BinSetConfiguration binSetConfiguration = new BinSetConfiguration();
             ArrayList<Double> binsCapacity = new ArrayList<>();
-            ArrayList<Double> binsTypeLowerBound = new ArrayList<>();
-            ArrayList<Integer> lowerBoundAmount = new ArrayList<>();
+            ArrayList<Double> binsTypeUpperBound = new ArrayList<>();
+            ArrayList<Integer> UpperBoundAmount = new ArrayList<>();
             BinsGenerator bg = new BinsGenerator();
             out.println("Bin types number: ");
             Scanner bt = new Scanner(in);
@@ -277,6 +277,8 @@ public class Main {
                                 binsCapacity.addAll(bg.generateCapacitiesWithNormalDistribution(binSetConfiguration.getDistributionParameters().get(0),binSetConfiguration.getDistributionParameters().get(1),binSetConfiguration.getBinsNumber()));
                                 flag = true;
                             }
+                        }else{
+                            flag = true;
                         }
                     }
                     break;
@@ -301,6 +303,8 @@ public class Main {
                                 binsCapacity.addAll(bg.generateCapacitiesWithGammaDistribution(binSetConfiguration.getDistributionParameters().get(0),binSetConfiguration.getDistributionParameters().get(1),binSetConfiguration.getBinsNumber()));
                                 flag = true;
                             }
+                        }else{
+                            flag = true;
                         }
                     }
                     break;
@@ -325,6 +329,8 @@ public class Main {
                                 binsCapacity.addAll(bg.generateCapacitiesWithWeibullDistribution(binSetConfiguration.getDistributionParameters().get(0),binSetConfiguration.getDistributionParameters().get(1),binSetConfiguration.getBinsNumber()));
                                 flag = true;
                             }
+                        }else{
+                            flag = true;
                         }
                     }
                     break;
@@ -396,6 +402,8 @@ public class Main {
                                         flag = true;
                                         break;
                                 }
+                            }else{
+                                flag = true;
                             }
                         }
                     }
@@ -424,24 +432,24 @@ public class Main {
             }
             int lbType = 0;
             int its = 0;
-            out.println("Generate lower bound? [Yes | No]: ");
+            out.println("Generate upper bound? [Yes | No]: ");
             Scanner lw = new Scanner(in);
             String lb = lw.next();
             if (lb.equalsIgnoreCase( "Y")) {
-                out.println("Lower bound type: ");
+                out.println("Upper bound type: ");
                 out.println("[1] - Automatic");
                 out.println("[2] - Stricted");
                 out.println("[3] - Fixed");
                 out.print("Select your option: ");
                 Scanner lwt = new Scanner(in);
                 lbType = lwt.nextInt();
-                binSetConfiguration.setLowerBoundType(lbType);
+                binSetConfiguration.setUpperBoundType(lbType);
             }else{
-                binSetConfiguration.setLowerBoundType(0);
+                binSetConfiguration.setUpperBoundType(0);
             }
-            if(binSetConfiguration.getLowerBoundType() > 0){
-                binsTypeLowerBound.clear();
-                if (binSetConfiguration.getLowerBoundType() == 3){
+            if(binSetConfiguration.getUpperBoundType() > 0){
+                binsTypeUpperBound.clear();
+                if (binSetConfiguration.getUpperBoundType() == 3){
                     out.println("Set the maximum number of bins per type");
                     out.print("Same upper bound for every bin type? [Yes | No]");
                     Scanner slb = new Scanner(in);
@@ -452,8 +460,8 @@ public class Main {
                         int bqx = cx.nextInt();
                         int ly = 0;
                         while (ly < binSetConfiguration.getBinsNumber()){
-                            lowerBoundAmount.add(bqx);
-                            binSetConfiguration.getLowerBoundParameters().add(bqx);
+                            UpperBoundAmount.add(bqx);
+                            binSetConfiguration.getUpperBoundParameters().add(bqx);
                             ly++;
                         }
                     }else{
@@ -462,8 +470,8 @@ public class Main {
                             out.print("For bin type with capacity "+binsCapacity.get(z)+" : ");
                             Scanner c = new Scanner(in);
                             int bq = c.nextInt();
-                            binSetConfiguration.getLowerBoundParameters().add(bq);
-                            lowerBoundAmount.add(bq);
+                            binSetConfiguration.getUpperBoundParameters().add(bq);
+                            UpperBoundAmount.add(bq);
                             z++;
                         }
                     }
@@ -471,7 +479,8 @@ public class Main {
             }
             out.println("Generating...");
             while (its < config.getItemsSetsNumber()){
-                binsTypeLowerBound.addAll(bg.generateLowerBound(binSetConfiguration,binsCapacity,itemSets.get(its)));
+                binsTypeUpperBound.clear();
+                binsTypeUpperBound.addAll(bg.generateUpperBound(binSetConfiguration,binsCapacity,itemSets.get(its)));
                 File excelFolder = new File("generated/Excel");
                 File mpFolder = new File("generated/MathProg");
                 if(!excelFolder.exists())
@@ -481,7 +490,7 @@ public class Main {
                 String setName = "generated/Excel/G"+group+"I"+its+"N"+itemSets.get(its).size()+"B"+binSetConfiguration.getBinsNumber();
                 String mpName = "generated/MathProg/G"+group+"I"+its+"N"+itemSets.get(its).size()+"B"+binSetConfiguration.getBinsNumber()+".dat";
                 String baseExcel = setName+".xls";
-                ExcelGenerator.writeInExcel(binsTypeLowerBound,bg.generateBinTypeCost(binsTypeLowerBound,costFunction, binSetConfiguration.getCostFuntionParameters()), itemSets.get(its),setName);
+                ExcelGenerator.writeInExcel(binsTypeUpperBound,bg.generateBinTypeCost(binsTypeUpperBound,costFunction, binSetConfiguration.getCostFuntionParameters()), itemSets.get(its),setName);
                 ExcelTranslator.Translate(baseExcel,mpName);
                 its++;
             }

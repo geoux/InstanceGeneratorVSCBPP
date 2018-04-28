@@ -17,8 +17,7 @@ public class BinsGenerator {
     private double calculateDemand(ArrayList<Double> items, Double capacity, int type){
         final double[] result = {0};
         int i = 0;
-        boolean flag = true;
-        while (i < items.size() && flag){
+        while (i < items.size()){
             if (items.get(i) <= capacity){
                 switch (type){
                     case 1:
@@ -28,17 +27,15 @@ public class BinsGenerator {
                         result[0]++;
                         break;
                 }
-            }else{
-                flag = false;
             }
             i++;
         }
         return result[0];
     }
 
-    public ArrayList<Double> generateLowerBound(BinSetConfiguration binSetConfiguration, ArrayList<Double> binTypes, ArrayList<Double> items){
+    public ArrayList<Double> generateUpperBound(BinSetConfiguration binSetConfiguration, ArrayList<Double> binTypes, ArrayList<Double> items){
         ArrayList<Double> result = new ArrayList<>();
-        switch (binSetConfiguration.getLowerBoundType()){
+        switch (binSetConfiguration.getUpperBoundType()){
             case 0:
                 // No upper bound
                 result.addAll(binTypes);
@@ -77,7 +74,7 @@ public class BinsGenerator {
             case 3:
                 // Fixed upper bound
                 int index = 0;
-                for(Integer i: binSetConfiguration.getLowerBoundParameters()){
+                for(Integer i: binSetConfiguration.getUpperBoundParameters()){
                     int j = 0;
                     while (j < i){
                         result.add(binTypes.get(index));
