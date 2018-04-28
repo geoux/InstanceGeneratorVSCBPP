@@ -231,10 +231,9 @@ public class Main {
             out.print("Select your option: ");
             Scanner bctg = new Scanner(in);
             binSetConfiguration.setDistribution(bctg.nextInt());
-            boolean flag;
+            boolean flag = false;
             switch (binSetConfiguration.getDistribution()){
                 case 1:
-                    flag = false;
                     out.println("UNIFORM DISTRIBUTION PARAMETERS FOR BIN TYPES CAPACITIES");
                     while(!flag){
                         binsCapacity.clear();
@@ -259,82 +258,146 @@ public class Main {
                     break;
                 case 2:
                     out.println("NORMAL DISTRIBUTION PARAMETERS FOR BIN TYPES CAPACITIES");
-                    binsCapacity.clear();
-                    binSetConfiguration.getDistributionParameters().clear();
-                    out.println("Specify mean: ");
-                    Scanner mean = new Scanner(in);
-                    binSetConfiguration.getDistributionParameters().add(mean.nextDouble());
-                    out.println("Specify standard deviation: ");
-                    Scanner std = new Scanner(in);
-                    binSetConfiguration.getDistributionParameters().add(std.nextDouble());
-                    binsCapacity.addAll(bg.generateCapacitiesWithNormalDistribution(binSetConfiguration.getDistributionParameters().get(0),binSetConfiguration.getDistributionParameters().get(1),binSetConfiguration.getBinsNumber()));
-                    double greaterBinValidation = binsCapacity.stream().max(Comparator.comparing(aDouble -> aDouble)).get();
-                    if (greaterBinValidation < maxweight){
-                        BinSetConfiguration fixer = fixDistributionParameters(binSetConfiguration,binsCapacity,maxweight);
-                        if (fixer != null){
-                            binSetConfiguration = fixer;
+                    while (!flag){
+                        binsCapacity.clear();
+                        binSetConfiguration.getDistributionParameters().clear();
+                        out.println("Specify mean: ");
+                        Scanner mean = new Scanner(in);
+                        binSetConfiguration.getDistributionParameters().add(mean.nextDouble());
+                        out.println("Specify standard deviation: ");
+                        Scanner std = new Scanner(in);
+                        binSetConfiguration.getDistributionParameters().add(std.nextDouble());
+                        binsCapacity.addAll(bg.generateCapacitiesWithNormalDistribution(binSetConfiguration.getDistributionParameters().get(0),binSetConfiguration.getDistributionParameters().get(1),binSetConfiguration.getBinsNumber()));
+                        double greaterBinValidation = binsCapacity.stream().max(Comparator.comparing(aDouble -> aDouble)).get();
+                        if (greaterBinValidation < maxweight){
+                            BinSetConfiguration fixer = fixDistributionParameters(binSetConfiguration,binsCapacity,maxweight);
+                            if (fixer != null){
+                                binSetConfiguration = fixer;
+                                binsCapacity.clear();
+                                binsCapacity.addAll(bg.generateCapacitiesWithNormalDistribution(binSetConfiguration.getDistributionParameters().get(0),binSetConfiguration.getDistributionParameters().get(1),binSetConfiguration.getBinsNumber()));
+                                flag = true;
+                            }
                         }
                     }
                     break;
                 case 3:
                     out.println("GAMMA DISTRIBUTION PARAMETERS FOR BIN TYPES CAPACITIES");
-                    binsCapacity.clear();
-                    binSetConfiguration.getDistributionParameters().clear();
-                    out.println("Specify shape: ");
-                    Scanner shape = new Scanner(in);
-                    binSetConfiguration.getDistributionParameters().add(shape.nextDouble());
-                    out.println("Specify scale: ");
-                    Scanner scale = new Scanner(in);
-                    binSetConfiguration.getDistributionParameters().add(scale.nextDouble());
-                    binsCapacity.addAll(bg.generateCapacitiesWithGammaDistribution(binSetConfiguration.getDistributionParameters().get(0),binSetConfiguration.getDistributionParameters().get(1),binSetConfiguration.getBinsNumber()));
-                    double bGammaValidation = binsCapacity.stream().max(Comparator.comparing(aDouble -> aDouble)).get();
-                    if (bGammaValidation < maxweight){
-                        BinSetConfiguration fixer = fixDistributionParameters(binSetConfiguration,binsCapacity,maxweight);
-                        if (fixer != null){
-                            binSetConfiguration = fixer;
+                    while (!flag){
+                        binsCapacity.clear();
+                        binSetConfiguration.getDistributionParameters().clear();
+                        out.println("Specify shape: ");
+                        Scanner shape = new Scanner(in);
+                        binSetConfiguration.getDistributionParameters().add(shape.nextDouble());
+                        out.println("Specify scale: ");
+                        Scanner scale = new Scanner(in);
+                        binSetConfiguration.getDistributionParameters().add(scale.nextDouble());
+                        binsCapacity.addAll(bg.generateCapacitiesWithGammaDistribution(binSetConfiguration.getDistributionParameters().get(0),binSetConfiguration.getDistributionParameters().get(1),binSetConfiguration.getBinsNumber()));
+                        double bGammaValidation = binsCapacity.stream().max(Comparator.comparing(aDouble -> aDouble)).get();
+                        if (bGammaValidation < maxweight){
+                            BinSetConfiguration fixer = fixDistributionParameters(binSetConfiguration,binsCapacity,maxweight);
+                            if (fixer != null){
+                                binSetConfiguration = fixer;
+                                binsCapacity.clear();
+                                binsCapacity.addAll(bg.generateCapacitiesWithGammaDistribution(binSetConfiguration.getDistributionParameters().get(0),binSetConfiguration.getDistributionParameters().get(1),binSetConfiguration.getBinsNumber()));
+                                flag = true;
+                            }
                         }
                     }
                     break;
                 case 4:
                     out.println("WEIBULL DISTRIBUTION PARAMETERS FOR BIN TYPES CAPACITIES");
-                    binsCapacity.clear();
-                    binSetConfiguration.getDistributionParameters().clear();
-                    out.println("Specify alpha: ");
-                    Scanner alpha = new Scanner(in);
-                    binSetConfiguration.getDistributionParameters().add(alpha.nextDouble());
-                    out.println("Specify beta: ");
-                    Scanner beta = new Scanner(in);
-                    binSetConfiguration.getDistributionParameters().add(beta.nextDouble());
-                    binsCapacity.addAll(bg.generateCapacitiesWithWeibullDistribution(binSetConfiguration.getDistributionParameters().get(0),binSetConfiguration.getDistributionParameters().get(1),binSetConfiguration.getBinsNumber()));
-                    double bWeibullinValidation = binsCapacity.stream().max(Comparator.comparing(aDouble -> aDouble)).get();
-                    if (bWeibullinValidation < maxweight){
-                        BinSetConfiguration fixer = fixDistributionParameters(binSetConfiguration,binsCapacity,maxweight);
-                        if (fixer != null){
-                            binSetConfiguration = fixer;
+                    while (!flag){
+                        binsCapacity.clear();
+                        binSetConfiguration.getDistributionParameters().clear();
+                        out.println("Specify alpha: ");
+                        Scanner alpha = new Scanner(in);
+                        binSetConfiguration.getDistributionParameters().add(alpha.nextDouble());
+                        out.println("Specify beta: ");
+                        Scanner beta = new Scanner(in);
+                        binSetConfiguration.getDistributionParameters().add(beta.nextDouble());
+                        binsCapacity.addAll(bg.generateCapacitiesWithWeibullDistribution(binSetConfiguration.getDistributionParameters().get(0),binSetConfiguration.getDistributionParameters().get(1),binSetConfiguration.getBinsNumber()));
+                        double bWeibullinValidation = binsCapacity.stream().max(Comparator.comparing(aDouble -> aDouble)).get();
+                        if (bWeibullinValidation < maxweight){
+                            BinSetConfiguration fixer = fixDistributionParameters(binSetConfiguration,binsCapacity,maxweight);
+                            if (fixer != null){
+                                binSetConfiguration = fixer;
+                                binsCapacity.clear();
+                                binsCapacity.addAll(bg.generateCapacitiesWithWeibullDistribution(binSetConfiguration.getDistributionParameters().get(0),binSetConfiguration.getDistributionParameters().get(1),binSetConfiguration.getBinsNumber()));
+                                flag = true;
+                            }
                         }
                     }
                     break;
                 case 5:
-                    binSetConfiguration.getDistributionParameters().clear();
-                    out.println("Starting value of the interval: ");
-                    Scanner sv = new Scanner(in);
-                    double st = sv.nextDouble();
-                    out.println("Increment value of the interval: ");
-                    Scanner iv = new Scanner(in);
-                    double maxint = iv.nextDouble();
-                    binSetConfiguration.getDistributionParameters().add(st);
-                    binSetConfiguration.getDistributionParameters().add(maxint);
-                    binsCapacity.addAll(bg.generateCapacitiesWithIncrement(binSetConfiguration.getDistributionParameters().get(0),binSetConfiguration.getDistributionParameters().get(1),binSetConfiguration.getBinsNumber()));
+                    while (!flag){
+                        binSetConfiguration.getDistributionParameters().clear();
+                        binsCapacity.clear();
+                        out.println("Starting value of the interval: ");
+                        Scanner sv = new Scanner(in);
+                        double st = sv.nextDouble();
+                        out.println("Increment value of the interval: ");
+                        Scanner iv = new Scanner(in);
+                        double maxint = iv.nextDouble();
+                        binSetConfiguration.getDistributionParameters().add(st);
+                        binSetConfiguration.getDistributionParameters().add(maxint);
+                        binsCapacity.addAll(bg.generateCapacitiesWithIncrement(binSetConfiguration.getDistributionParameters().get(0),binSetConfiguration.getDistributionParameters().get(1),binSetConfiguration.getBinsNumber()));
+                        double binCmp = binsCapacity.get(binsCapacity.size() - 1);
+                        if (binCmp < maxweight){
+                            out.println("Greater bin capacity ("+binCmp+ ") is smaller than heaviest item ("+maxweight+"). Please, redefine parameters ");
+                        }else{
+                            flag = true;
+                        }
+                    }
                     break;
                 case 6:
-                    int j = 0;
-                    while (j < binSetConfiguration.getBinsNumber()){
-                        out.println("Bins capacity number of type "+(j + 1)+": ");
-                        Scanner bn = new Scanner(in);
-                        double bngen = bn.nextDouble();
-                        binSetConfiguration.getDistributionParameters().add(bngen);
-                        binsCapacity.add(bngen);
-                        j++;
+                    while (!flag){
+                        binsCapacity.clear();
+                        binSetConfiguration.getDistributionParameters().clear();
+                        int j = 0;
+                        while (j < binSetConfiguration.getBinsNumber()){
+                            out.println("Bins capacity number of type "+(j + 1)+": ");
+                            Scanner bn = new Scanner(in);
+                            double bngen = bn.nextDouble();
+                            binSetConfiguration.getDistributionParameters().add(bngen);
+                            binsCapacity.add(bngen);
+                            j++;
+                            double binCmp = binsCapacity.get(binsCapacity.size() - 1);
+                            if(j == binSetConfiguration.getBinsNumber() && binCmp < maxweight){
+                                out.println("Greater bin capacity ("+binCmp+ ") is smaller than heaviest item ("+maxweight+").");
+                                out.println("What would you like to do?:");
+                                out.println("[1] - Add another bin type with greater capacity");
+                                out.println("[2] - Automatically increase the capacity of the last bin type");
+                                out.println("[3] - Redefine all bin types");
+                                Scanner opt = new Scanner(in);
+                                int db = opt.nextInt();
+                                switch (db){
+                                    case 1:
+                                        boolean ok = false;
+                                        double nb = 0;
+                                        while (!ok){
+                                            out.println("New bin type: ");
+                                            Scanner nbt = new Scanner(in);
+                                            nb = nbt.nextDouble();
+                                            if (nb < maxweight){
+                                                out.println("Not enough capacity. Try again...");
+                                            }else{
+                                                ok = true;
+                                            }
+                                        }
+                                        binSetConfiguration.getDistributionParameters().add(nb);
+                                        binsCapacity.add(nb);
+                                        binSetConfiguration.setBinsNumber(binSetConfiguration.getBinsNumber() + 1);
+                                        flag = true;
+                                        break;
+                                    case 2:
+                                        double newValue = maxweight + (Math.random() * 10);
+                                        binsCapacity.set(binsCapacity.size() - 1, newValue);
+                                        binSetConfiguration.getDistributionParameters().set(binSetConfiguration.getDistributionParameters().size() - 1, newValue);
+                                        flag = true;
+                                        break;
+                                }
+                            }
+                        }
                     }
                     break;
             }
@@ -457,16 +520,24 @@ public class Main {
         Scanner ch = new Scanner(in);
         switch (ch.nextInt()){
             case 1:
-                out.print("Units to increase heavier bin type capacity: ");
-                Scanner grow = new Scanner(in);
-                Double fix = grow.nextDouble();
+                Double fix = Math.random() * 10;
                 binsCapacity.set(binsCapacity.size()-1,maxweight+fix);
                 binSetConfiguration.getDistributionParameters().set(0,binSetConfiguration.getDistributionParameters().get(0) + fix);
                 break;
             case 2:
-                out.print("New bin type capacity: ");
-                Scanner nw = new Scanner(in);
-                Double fixedBin = nw.nextDouble();
+                boolean ok = false;
+                double fixedBin = 0;
+                while (!ok){
+                    out.println("New bin type capacity: ");
+                    out.println("(Must be greater than "+maxweight+")");
+                    Scanner nw = new Scanner(in);
+                    fixedBin = nw.nextDouble();
+                    if (fixedBin >= maxweight){
+                        ok = true;
+                    }else{
+                        out.println("Not big enough, try again... ");
+                    }
+                }
                 binsCapacity.add(fixedBin);
                 binSetConfiguration.setBinsNumber(binSetConfiguration.getBinsNumber() + 1);
                 double reduced = binsCapacity.stream().reduce((aDouble, aDouble2) -> aDouble + aDouble2).get() / binsCapacity.size();

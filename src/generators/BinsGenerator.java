@@ -98,9 +98,6 @@ public class BinsGenerator {
         bins.forEach(integer -> {
             switch (function){
                 case 1:
-                    if (integer == null){
-                        String s = "Null";
-                    }
                     double evaluated = (parameters.get(0) * integer) + parameters.get(1);
                     result.add(evaluated);
                     break;
