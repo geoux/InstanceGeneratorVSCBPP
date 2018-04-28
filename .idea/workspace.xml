@@ -7,67 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3823692-3639-4bbc-b9fa-285ef2c2924d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generated/Excel/G1I1N200B12.xls" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/commons-math3-3.6.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/poi-3.8-20120326.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/poi-examples-3.8-20120326.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/poi-excelant-3.8-20120326.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/poi-ooxml-3.8-20120326.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/poi-ooxml-schemas-3.8-20120326.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/poi-scratchpad-3.8-20120326.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/yamlbeans-1.13.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/InstanceGenerator-VCSBPP.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/generated/Excel/G1I0N25B3.xls" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/generated/Excel/G1I1N26B3.xls" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/generated/Excel/G1I2N25B3.xls" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/generated/Excel/G2I0N25B5.xls" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/generated/Excel/G2I1N26B5.xls" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/generated/Excel/G2I2N25B5.xls" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/Main.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/configuration/BinSetConfiguration.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/configuration/Configuration.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/configuration/ItemSetConfiguration.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/generators/BinsGenerator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/generators/ItemsGenerator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/utils/ExcelGenerator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/utils/ExcelTranslator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/utils/RandomHelper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/InstanceGenerator_VCSBPP_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/g_ux.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/commons_math3_3_6_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/poi_3_8_20120326.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/yamlbeans_1_13.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/InstanceGenerator-VCSBPP.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/configuration.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generated/MathProg/G1I1N200B12.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/Readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/configuration.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/generated/MathProg/G1I0N25B3.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/generated/MathProg/G1I1N26B3.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/generated/MathProg/G1I2N25B3.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/generated/MathProg/G2I0N25B5.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/generated/MathProg/G2I1N26B5.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/generated/MathProg/G2I2N25B5.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/Readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/configuration/BinSetConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/configuration/Configuration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/configuration/ItemSetConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/generators/BinsGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/generators/ItemsGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/ExcelGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/ExcelTranslator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/RandomHelper.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/configuration.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Excel/G1I1N200B12.xls" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/MathProg/G1I1N200B12.dat" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/generators/BinsGenerator.class" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/generators/BinsGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/generators/BinsGenerator.java" afterPath="$PROJECT_DIR$/src/generators/BinsGenerator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,11 +25,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="73" column="42" lean-forward="true" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
+            <state relative-caret-position="56">
+              <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -92,28 +37,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BinsGenerator.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BinsGenerator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/generators/BinsGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+            <state relative-caret-position="344">
+              <caret line="83" column="28" lean-forward="false" selection-start-line="83" selection-start-column="28" selection-end-line="83" selection-end-column="28" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BinSetConfiguration.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/configuration/BinSetConfiguration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-              <folding>
-                <element signature="e#1368#1369#0" expanded="true" />
-                <element signature="e#1413#1414#0" expanded="true" />
-                <element signature="e#1452#1453#0" expanded="true" />
-                <element signature="e#1490#1491#0" expanded="true" />
-                <element signature="e#1701#1702#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -173,8 +102,8 @@
         <option value="$PROJECT_DIR$/src/configuration/BinSetConfiguration.java" />
         <option value="$PROJECT_DIR$/src/utils/ExcelTranslator.java" />
         <option value="$PROJECT_DIR$/src/Readme.md" />
-        <option value="$PROJECT_DIR$/src/generators/BinsGenerator.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/generators/BinsGenerator.java" />
       </list>
     </option>
   </component>
@@ -735,16 +664,15 @@
       <workItem from="1524142864796" duration="2833000" />
       <workItem from="1524153033131" duration="39000" />
       <workItem from="1524861646619" duration="477000" />
-      <workItem from="1524865879537" duration="5115000" />
+      <workItem from="1524865879537" duration="8977000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95564000" />
+    <option name="totallyTimeSpent" value="99426000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="741" extended-state="7" />
-    <editor active="true" />
+    <frame x="0" y="27" width="1366" height="741" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -756,12 +684,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.78453946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7831126" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23141123" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23141123" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55921054" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962063" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -769,7 +697,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.62664473" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6258278" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -799,15 +727,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/generators/BinsGenerator.java</url>
-          <line>94</line>
-          <properties />
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="43" />
+      <option name="time" value="50" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1163,6 +1083,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/configuration/BinSetConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
@@ -1179,19 +1109,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/generators/BinsGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+        <state relative-caret-position="344">
+          <caret line="83" column="28" lean-forward="false" selection-start-line="83" selection-start-column="28" selection-end-line="83" selection-end-column="28" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="73" column="42" lean-forward="true" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

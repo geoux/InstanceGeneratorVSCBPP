@@ -7,6 +7,7 @@ import org.apache.commons.math3.distribution.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Created by g-ux on 31/03/18.
@@ -44,10 +45,10 @@ public class BinsGenerator {
                 break;
             case 1:
                 // Automatic upper bound
-                binTypes.parallelStream().forEach(aDouble -> {
+                binTypes.forEach(aDouble -> {
                     double demand = this.calculateDemand(items, aDouble,1);
                     if (demand > 0){
-                        double amount = demand / aDouble;
+                        int amount = (int) (demand / aDouble);
                         int i = 0;
                         while (i < amount){
                             result.add(aDouble);
@@ -60,7 +61,7 @@ public class BinsGenerator {
                 break;
             case 2:
                 // Stricted upper bound
-                binTypes.parallelStream().forEach(aDouble -> {
+                binTypes.forEach(aDouble -> {
                     double demand = this.calculateDemand(items, aDouble,2);
                     if (demand > 0){
                         int i = 0;
@@ -80,6 +81,7 @@ public class BinsGenerator {
                     int j = 0;
                     while (j < i){
                         result.add(binTypes.get(index));
+                        j++;
                     }
                     index++;
                 }
@@ -90,9 +92,15 @@ public class BinsGenerator {
 
     public ArrayList<Double> generateBinTypeCost(ArrayList<Double> bins, int function, List<Double> parameters){
         ArrayList<Double> result = new ArrayList<>();
+        if (bins.parallelStream().anyMatch(Objects::isNull)){
+            bins.removeIf(Objects::isNull);
+        }
         bins.forEach(integer -> {
             switch (function){
                 case 1:
+                    if (integer == null){
+                        String s = "Null";
+                    }
                     double evaluated = (parameters.get(0) * integer) + parameters.get(1);
                     result.add(evaluated);
                     break;
