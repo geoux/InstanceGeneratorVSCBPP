@@ -76,6 +76,47 @@ public class Main {
                     String mpName = "generated/MathProg/G"+(binGroup + 1)+"I"+(instanceID + 1)+"N"+itemSet.size()+"B"+binSetConfiguration.getBinsNumber()+".dat";
                     String baseExcel = setName+".xls";
                     ArrayList<Double> UpperBound = new ArrayList<>();
+                    /* Check distribution parameters and fix it if worth it */
+                    String fixMsg = "";
+                    String firstPar = "";
+                    String secondPar = "";
+                    if (!checkDistribution(binSetConfiguration,itemSet)){
+                        firstPar = " from "+binSetConfiguration.getDistributionParameters().get(0)+" to ";
+                        secondPar = " from "+binSetConfiguration.getDistributionParameters().get(1)+" to ";
+                        Double max = itemSet.stream().max(Comparator.comparing(Double::doubleValue)).get();
+                        double[] fix = calculateAutomaticFix(binSetConfiguration.getDistribution(),binSetConfiguration.getDistributionParameters().get(0),binSetConfiguration.getDistributionParameters().get(1),binSetConfiguration.getBinsNumber(),max);
+                        binSetConfiguration.getDistributionParameters().set(0,fix[0]);
+                        binSetConfiguration.getDistributionParameters().set(1,fix[1]);
+                        String distStr = "";
+                        binSetsCapacities.get(binGroup).clear();
+                        switch (binSetConfiguration.getDistribution()){
+                            case 2:
+                                distStr = "Normal distribution";
+                                firstPar = "Mean:"+firstPar+binSetConfiguration.getDistributionParameters().get(0);
+                                secondPar = "Standard deviation:"+secondPar+binSetConfiguration.getDistributionParameters().get(1);
+                                binSetsCapacities.get(binGroup).addAll(bg.generateCapacitiesWithNormalDistribution(binSetConfiguration.getDistributionParameters().get(0),binSetConfiguration.getDistributionParameters().get(1),binSetConfiguration.getBinsNumber()));
+                                break;
+                            case 3:
+                                distStr = "Gamma distribution";
+                                firstPar = "Shape:"+firstPar+binSetConfiguration.getDistributionParameters().get(0);
+                                secondPar = "Scale:"+secondPar+binSetConfiguration.getDistributionParameters().get(1);
+                                binSetsCapacities.get(binGroup).addAll(bg.generateCapacitiesWithGammaDistribution(binSetConfiguration.getDistributionParameters().get(0),binSetConfiguration.getDistributionParameters().get(1),binSetConfiguration.getBinsNumber()));
+                                break;
+                            case 4:
+                                distStr = "Weibull distribution";
+                                firstPar = "Alpha:"+firstPar+binSetConfiguration.getDistributionParameters().get(0);
+                                secondPar = "Beta:"+secondPar+binSetConfiguration.getDistributionParameters().get(1);
+                                binSetsCapacities.get(binGroup).addAll(bg.generateCapacitiesWithWeibullDistribution(binSetConfiguration.getDistributionParameters().get(0),binSetConfiguration.getDistributionParameters().get(1),binSetConfiguration.getBinsNumber()));
+                                break;
+                        }
+                        fixMsg = "Parameters of bin set "+binGroup+", with "+distStr+" where fixed to ensure that greater bin can pack heavier item";
+                    }
+                    if(fixMsg != ""){
+                        out.println(fixMsg);
+                        out.println("Parameters where set as follows: ");
+                        out.println(firstPar);
+                        out.println(secondPar);
+                    }
                     UpperBound.addAll(bg.generateUpperBound(binSetConfiguration,binSetsCapacities.get(binGroup),itemSet));
                     ArrayList<Double> binsCost = new ArrayList<>();
                     binsCost.addAll(bg.generateBinTypeCost(UpperBound,binSetConfiguration.getCostFuntionType(),binSetConfiguration.getCostFuntionParameters()));
@@ -90,6 +131,34 @@ public class Main {
             out.println("Exiting generator, thanks for using it!!! ");
         }catch (IOException e){
             out.println(e.getMessage());
+        }
+    }
+
+    static private boolean checkDistribution(BinSetConfiguration configuration, ArrayList<Double> items){
+        ArrayList<Double> bins = new ArrayList<>();
+        BinsGenerator tmpGen = new BinsGenerator();
+        switch (configuration.getDistribution()){
+            case 2:
+                //Normal
+                bins.addAll(tmpGen.generateCapacitiesWithNormalDistribution(configuration.getDistributionParameters().get(0),configuration.getDistributionParameters().get(1),configuration.getBinsNumber()));
+                break;
+            case 3:
+                //Gamma
+                bins.addAll(tmpGen.generateCapacitiesWithGammaDistribution(configuration.getDistributionParameters().get(0),configuration.getDistributionParameters().get(1),configuration.getBinsNumber()));
+                break;
+            case 4:
+                //Weibull
+                bins.addAll(tmpGen.generateCapacitiesWithWeibullDistribution(configuration.getDistributionParameters().get(0),configuration.getDistributionParameters().get(1),configuration.getBinsNumber()));
+                break;
+        }
+        if(!bins.isEmpty()){
+            bins.sort(Comparator.comparing(Double::doubleValue));
+            Double maxCapacity = bins.get(bins.size() - 1);
+            items.sort(Comparator.comparing(Double::doubleValue));
+            Double maxWeigth = items.get(items.size() - 1);
+            return (maxCapacity > maxWeigth);
+        }else{
+            return true;
         }
     }
 
