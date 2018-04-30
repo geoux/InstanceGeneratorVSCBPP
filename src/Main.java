@@ -195,7 +195,7 @@ public class Main {
                         out.print("2 - For the medium ones: ");
                         Scanner itwd2 = new Scanner(in);
                         itemSetConfiguration.getRoulettePercentils().add(itwd2.nextInt());
-                        int rest = 100 - Math.abs(itemSetConfiguration.getRoulettePercentils().get(0) - itemSetConfiguration.getRoulettePercentils().get(1));
+                        int rest = 100 - Math.abs(itemSetConfiguration.getRoulettePercentils().get(0) + itemSetConfiguration.getRoulettePercentils().get(1));
                         out.println("3 - For the smallers: "+rest+"%");
                         itemSetConfiguration.getRoulettePercentils().add(rest);
                         break;
@@ -529,9 +529,9 @@ public class Main {
         Scanner ch = new Scanner(in);
         switch (ch.nextInt()){
             case 1:
-                Double fix = Math.random() * 10;
-                binsCapacity.set(binsCapacity.size()-1,maxweight+fix);
-                binSetConfiguration.getDistributionParameters().set(0,binSetConfiguration.getDistributionParameters().get(0) + fix);
+                double[] fix = calculateAutomaticFix(binSetConfiguration.getDistribution(),binSetConfiguration.getDistributionParameters().get(0),binSetConfiguration.getDistributionParameters().get(1),binSetConfiguration.getBinsNumber(),maxweight);
+                binSetConfiguration.getDistributionParameters().set(0,fix[0]);
+                binSetConfiguration.getDistributionParameters().set(1,fix[1]);
                 break;
             case 2:
                 boolean ok = false;
@@ -557,5 +557,43 @@ public class Main {
                 break;
         }
         return (flag)?binSetConfiguration:null;
+    }
+
+    static private double[] calculateAutomaticFix(int distribution, double first, double second, int quantity, double max){
+        double[] result = new double[2];
+        BinsGenerator tmpBG = new BinsGenerator();
+        boolean flag = false;
+        double firstPar;
+        double secondPar;
+        while (!flag){
+            firstPar = first + (Math.random() * 10);
+            secondPar = second + (Math.random() * 5);
+            ArrayList<Double> cmp = new ArrayList<>();
+            switch (distribution){
+                case 2:
+                    //Normal
+                    cmp.addAll(tmpBG.generateCapacitiesWithNormalDistribution(firstPar,secondPar,quantity));
+                    break;
+                case 3:
+                    //Gamma
+                    cmp.addAll(tmpBG.generateCapacitiesWithGammaDistribution(firstPar,secondPar,quantity));
+                    break;
+                case 4:
+                    //Weibull
+                    cmp.addAll(tmpBG.generateCapacitiesWithWeibullDistribution(firstPar,secondPar,quantity));
+                    break;
+            }
+            cmp.sort(Comparator.comparing(Double::doubleValue));
+            double currentMax = cmp.get(cmp.size() - 1);
+            if (currentMax > max){
+                flag = true;
+                result[0] = firstPar;
+                result[1] = secondPar;
+            }else{
+                first = firstPar;
+                second = secondPar;
+            }
+        }
+        return result;
     }
 }
