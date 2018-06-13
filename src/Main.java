@@ -556,8 +556,20 @@ public class Main {
                     excelFolder.mkdirs();
                 if(!mpFolder.exists())
                     mpFolder.mkdirs();
-                String setName = "generated/Excel/G"+group+"I"+its+"N"+itemSets.get(its).size()+"B"+binSetConfiguration.getBinsNumber();
-                String mpName = "generated/MathProg/G"+group+"I"+its+"N"+itemSets.get(its).size()+"B"+binSetConfiguration.getBinsNumber()+".dat";
+                String setName = "generated/Excel/G"+group+"I"+its+"N"
+                        +itemSets.get(its).size()
+                        +returnIDName(config.itemsBySets.get(its).getDistribution())
+                        +"B"+binSetConfiguration.getBinsNumber()
+                        +returnBDName(binSetConfiguration.getDistribution())
+                        +returnCName(binSetConfiguration.getCostFuntionType());
+                String mpName = "generated/MathProg/G"+group
+                        +"I"+its
+                        +"N"+itemSets.get(its).size()
+                        +returnIDName(config.itemsBySets.get(its).getDistribution())
+                        +"B"+binSetConfiguration.getBinsNumber()
+                        +returnBDName(binSetConfiguration.getDistribution())
+                        +returnCName(binSetConfiguration.getCostFuntionType())
+                        +".dat";
                 String baseExcel = setName+".xls";
                 ExcelGenerator.writeInExcel(binsTypeUpperBound,bg.generateBinTypeCost(binsTypeUpperBound,costFunction, binSetConfiguration.getCostFuntionParameters()), itemSets.get(its),setName);
                 ExcelTranslator.Translate(baseExcel,mpName);
@@ -664,5 +676,35 @@ public class Main {
             }
         }
         return result;
+    }
+
+    private static String returnIDName(int d){
+        switch (d){
+            case 1: return "Un";
+            case 2: return "No";
+            case 3: return "Ga";
+            case 4: return "We";
+            case 5: return "Ro";
+        }
+        return "NaN";
+    }
+
+    private static String returnBDName(int b){
+        switch (b){
+            case 1: return "Un";
+            case 2: return "No";
+            case 3: return "We";
+        }
+        return "Ma";
+    }
+
+    private static String returnCName(int c){
+        switch (c){
+            case 1: return "Li";
+            case 2: return "In";
+            case 3: return "Cc";
+            case 4: return "Cv";
+        }
+        return "NaN";
     }
 }
