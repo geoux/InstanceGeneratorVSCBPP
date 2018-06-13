@@ -9,8 +9,12 @@
     <list default="true" id="e3823692-3639-4bbc-b9fa-285ef2c2924d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/InstanceGenerator-VCSBPP.jar" afterPath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/InstanceGenerator-VCSBPP.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/Main.class" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/generators/BinsGenerator.class" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/generators/BinsGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/generators/ItemsGenerator.class" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/generators/ItemsGenerator.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/generators/BinsGenerator.java" afterPath="$PROJECT_DIR$/src/generators/BinsGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/generators/ItemsGenerator.java" afterPath="$PROJECT_DIR$/src/generators/ItemsGenerator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,38 +30,11 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="707" column="19" lean-forward="false" selection-start-line="707" selection-start-column="19" selection-end-line="707" selection-end-column="19" />
+            <state relative-caret-position="66">
+              <caret line="87" column="36" lean-forward="false" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BinSetConfiguration.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/configuration/BinSetConfiguration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1040">
-              <caret line="82" column="15" lean-forward="false" selection-start-line="82" selection-start-column="15" selection-end-line="82" selection-end-column="15" />
-              <folding>
-                <element signature="e#1739#1740#0" expanded="true" />
-                <element signature="e#1776#1777#0" expanded="true" />
-                <element signature="e#1833#1834#0" expanded="true" />
-                <element signature="e#1885#1886#0" expanded="true" />
-                <element signature="e#1939#1940#0" expanded="true" />
-                <element signature="e#1982#1983#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BinsGenerator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/generators/BinsGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2840">
-              <caret line="149" column="53" lean-forward="false" selection-start-line="149" selection-start-column="53" selection-end-line="149" selection-end-column="53" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -111,7 +88,6 @@
         <option value="$PROJECT_DIR$/src/utils/Configuration.java" />
         <option value="$PROJECT_DIR$/src/utils/RandomHelper.java" />
         <option value="$PROJECT_DIR$/src/utils/ItemSetConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/generators/ItemsGenerator.java" />
         <option value="$PROJECT_DIR$/src/utils/ExcelGenerator.java" />
         <option value="$PROJECT_DIR$/src/configuration/Configuration.java" />
         <option value="$PROJECT_DIR$/src/configuration/ItemSetConfiguration.java" />
@@ -119,6 +95,7 @@
         <option value="$PROJECT_DIR$/src/Readme.md" />
         <option value="$PROJECT_DIR$/src/configuration/BinSetConfiguration.java" />
         <option value="$PROJECT_DIR$/src/generators/BinsGenerator.java" />
+        <option value="$PROJECT_DIR$/src/generators/ItemsGenerator.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
@@ -195,7 +172,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="configuration" />
+              <option name="myItemId" value="generators" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -684,7 +661,7 @@
       <workItem from="1524931221016" duration="5523000" />
       <workItem from="1525022321647" duration="2334000" />
       <workItem from="1525044016209" duration="5445000" />
-      <workItem from="1528862468247" duration="2013000" />
+      <workItem from="1528862468247" duration="7529000" />
     </task>
     <task id="LOCAL-00001" summary="Working generator.&#10;Fixed: upper bound generation and cost function issues">
       <created>1524877965181</created>
@@ -721,11 +698,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525050626739</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fixed: Naming instances with more data">
+      <created>1528864527733</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1528864527733</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114821000" />
+    <option name="totallyTimeSpent" value="120337000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -773,7 +757,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
@@ -784,11 +767,12 @@
     <MESSAGE value="Fixed: upper bound final adjustment" />
     <MESSAGE value="Fixed: fixing method for bins capacities distribution" />
     <MESSAGE value="Fixed: fixing method for bins capacities distribution in YAML reader" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed: fixing method for bins capacities distribution in YAML reader" />
+    <MESSAGE value="Fixed: Naming instances with more data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed: Naming instances with more data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="52" />
+      <option name="time" value="54" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -830,10 +814,6 @@
         <state relative-caret-position="1000">
           <caret line="50" column="58" lean-forward="false" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
           <folding>
-            <element signature="e#1739#1740#0" expanded="true" />
-            <element signature="e#1776#1777#0" expanded="true" />
-            <element signature="e#1833#1834#0" expanded="true" />
-            <element signature="e#1885#1886#0" expanded="true" />
             <element signature="e#1939#1940#0" expanded="true" />
             <element signature="e#1982#1983#0" expanded="true" />
           </folding>
@@ -1093,13 +1073,6 @@
     <entry file="file://$PROJECT_DIR$/src/example.yml" />
     <entry file="file://$PROJECT_DIR$/output.yml" />
     <entry file="file://$PROJECT_DIR$/src/output.yml" />
-    <entry file="file://$PROJECT_DIR$/src/utils/RandomHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/configuration/ItemSetConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -1140,38 +1113,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/configuration/BinSetConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1040">
+        <state relative-caret-position="1060">
           <caret line="82" column="15" lean-forward="false" selection-start-line="82" selection-start-column="15" selection-end-line="82" selection-end-column="15" />
           <folding>
-            <element signature="e#1739#1740#0" expanded="true" />
-            <element signature="e#1776#1777#0" expanded="true" />
-            <element signature="e#1833#1834#0" expanded="true" />
-            <element signature="e#1885#1886#0" expanded="true" />
             <element signature="e#1939#1940#0" expanded="true" />
             <element signature="e#1982#1983#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/generators/ItemsGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/generators/BinsGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="29" lean-forward="false" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        <state relative-caret-position="220">
+          <caret line="48" column="67" lean-forward="false" selection-start-line="48" selection-start-column="67" selection-end-line="48" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/generators/BinsGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/utils/RandomHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2840">
-          <caret line="149" column="53" lean-forward="false" selection-start-line="149" selection-start-column="53" selection-end-line="149" selection-end-column="53" />
+        <state relative-caret-position="295">
+          <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="43" />
+          <folding>
+            <element signature="e#268#269#0" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/generators/ItemsGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="980">
+          <caret line="56" column="33" lean-forward="false" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="707" column="19" lean-forward="false" selection-start-line="707" selection-start-column="19" selection-end-line="707" selection-end-column="19" />
+        <state relative-caret-position="66">
+          <caret line="87" column="36" lean-forward="false" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

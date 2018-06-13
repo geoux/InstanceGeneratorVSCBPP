@@ -42,10 +42,11 @@ public class BinsGenerator {
                 break;
             case 1:
                 // Automatic upper bound
+                double[] currentAv = {0};
                 binTypes.forEach(aDouble -> {
                     double demand = this.calculateDemand(items, aDouble,1);
                     if (demand > 0){
-                        int amount = (int) (demand / aDouble);
+                        int amount = (int) ((demand + demand * 0.05)/ aDouble);
                         int i = 0;
                         while (i < amount){
                             result.add(aDouble);

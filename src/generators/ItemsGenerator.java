@@ -51,21 +51,19 @@ public class ItemsGenerator {
                 Arrays.stream(distResult).forEach(result::add);
                 break;
             case 5:
-                for(int i=0; i<config.getItemsNumber(); i++){
-                    double[] interval = new double[3];
-                    double amount = config.getRangeEnd() / 3;
-                    interval[0] = config.getRangeInit();
-                    interval[1] = config.getRangeInit() + amount;
-                    interval[2] = interval[1] + amount;
-                    int wheel = rhelper.randValue(100);
-                    if(wheel > config.getRoulettePercentils().get(0) && wheel < config.getRoulettePercentils().get(1)){
+                double[] interval = new double[2];
+                interval[0] = config.getRangeInit()+config.getRoulettePercentils().get(0);
+                interval[1] = interval[0] + config.getRoulettePercentils().get(1);
+                for(int i=0; i < config.getItemsNumber(); i++){
+                    double wheel = Math.random() * config.getRangeEnd();
+                    if(wheel < interval[0]){
+                        result.add(rhelper.randRealInterval(config.getRangeInit(), interval[0]));
+                    }
+                    if(wheel > interval[0] && wheel < interval[1]){
                         result.add(rhelper.randRealInterval(interval[0], interval[1]));
                     }
-                    if(wheel > config.getRoulettePercentils().get(1) && wheel < config.getRoulettePercentils().get(2)){
-                        result.add(rhelper.randRealInterval(interval[1], interval[2]));
-                    }
-                    if(wheel > config.getRoulettePercentils().get(2)){
-                        result.add(rhelper.randRealInterval(interval[2], config.getRangeEnd()));
+                    if(wheel > interval[1]){
+                        result.add(rhelper.randRealInterval(interval[1], config.getRangeEnd()));
                     }
                 }
                 break;

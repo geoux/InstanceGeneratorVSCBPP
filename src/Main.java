@@ -8,6 +8,7 @@ import configuration.BinSetConfiguration;
 import generators.BinsGenerator;
 import generators.ItemsGenerator;
 import configuration.Configuration;
+import org.jetbrains.annotations.NotNull;
 import sun.security.util.BitArray;
 import utils.ExcelGenerator;
 import utils.ExcelTranslator;
@@ -72,8 +73,19 @@ public class Main {
                         excelFolder.mkdirs();
                     if(!mpFolder.exists())
                         mpFolder.mkdirs();
-                    String setName = "generated/Excel/G"+(binGroup + 1)+"I"+(instanceID + 1)+"N"+itemSet.size()+"B"+binSetConfiguration.getBinsNumber();
-                    String mpName = "generated/MathProg/G"+(binGroup + 1)+"I"+(instanceID + 1)+"N"+itemSet.size()+"B"+binSetConfiguration.getBinsNumber()+".dat";
+                    String setName = "generated/Excel/G"+(binGroup + 1)+"I"+(instanceID + 1)+"N"
+                            +itemSets.get(instanceID).size()
+                            +returnIDName(config.itemsBySets.get(instanceID).getDistribution())
+                            +"B"+binSetConfiguration.getBinsNumber()
+                            +returnBDName(binSetConfiguration.getDistribution())
+                            +returnCName(binSetConfiguration.getCostFuntionType());
+                    String mpName = "generated/MathProg/G"+(binGroup + 1)
+                            +itemSets.get(instanceID).size()
+                            +returnIDName(config.itemsBySets.get(instanceID).getDistribution())
+                            +"B"+binSetConfiguration.getBinsNumber()
+                            +returnBDName(binSetConfiguration.getDistribution())
+                            +returnCName(binSetConfiguration.getCostFuntionType())
+                            +".dat";
                     String baseExcel = setName+".xls";
                     ArrayList<Double> UpperBound = new ArrayList<>();
                     /* Check distribution parameters and fix it if worth it */
@@ -206,13 +218,6 @@ public class Main {
                     itemSetConfiguration.setRangeEnd(Integer.parseInt(range.substring(toSplit+1,range.length())));
                 }
             }
-
-            if(itemSetConfiguration.getRangeInit() < minweight){
-                minweight = itemSetConfiguration.getRangeInit();
-            }
-            if(itemSetConfiguration.getRangeEnd() > maxweight){
-                maxweight = itemSetConfiguration.getRangeEnd();
-            }
             if(itemSetConfiguration.getRangeInit() != itemSetConfiguration.getRangeEnd()){
                 out.println("Weight distribution: ");
                 out.println("[1] - Uniform");
@@ -275,6 +280,14 @@ public class Main {
             }
             config.getItemsBySets().add(itemSetConfiguration);
             itemSets.add(items);
+            double tmpMax = getHeavierItem(items);
+            if(tmpMax > maxweight){
+                maxweight = tmpMax;
+            }
+            double tmpMin = getSmallerItem(items);
+            if(tmpMin < minweight){
+                minweight = tmpMin;
+            }
             i++;
         }
         out.println("********* BIN TYPES SECTION **************");
@@ -676,6 +689,16 @@ public class Main {
             }
         }
         return result;
+    }
+
+    @NotNull
+    private static Double getHeavierItem(ArrayList<Double> items){
+        return items.stream().max(Comparator.comparing(Double::doubleValue)).get();
+    }
+
+    @NotNull
+    private static Double getSmallerItem(ArrayList<Double> items){
+        return items.stream().min(Comparator.comparing(Double::doubleValue)).get();
     }
 
     private static String returnIDName(int d){
