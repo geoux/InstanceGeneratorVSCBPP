@@ -85,7 +85,7 @@ public class Main {
                             +"B"+binSetConfiguration.getBinsNumber()
                             +returnBDName(binSetConfiguration.getDistribution())
                             +returnCName(binSetConfiguration.getCostFuntionType())
-                            +".dat";
+                            +".mod";
                     String baseExcel = setName+".xls";
                     ArrayList<Double> UpperBound = new ArrayList<>();
                     /* Check distribution parameters and fix it if worth it */
@@ -206,7 +206,6 @@ public class Main {
                 }
 
             }
-
             if(toSplit < 0){
                 itemSetConfiguration.setRangeInit(Integer.parseInt(range));
                 itemSetConfiguration.setRangeEnd(itemSetConfiguration.getRangeInit());
@@ -582,7 +581,7 @@ public class Main {
                         +"B"+binSetConfiguration.getBinsNumber()
                         +returnBDName(binSetConfiguration.getDistribution())
                         +returnCName(binSetConfiguration.getCostFuntionType())
-                        +".dat";
+                        +".mod";
                 String baseExcel = setName+".xls";
                 ExcelGenerator.writeInExcel(binsTypeUpperBound,bg.generateBinTypeCost(binsTypeUpperBound,costFunction, binSetConfiguration.getCostFuntionParameters()), itemSets.get(its),setName);
                 ExcelTranslator.Translate(baseExcel,mpName);

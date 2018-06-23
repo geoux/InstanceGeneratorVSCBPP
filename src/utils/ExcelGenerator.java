@@ -26,19 +26,12 @@ public class ExcelGenerator {
             FileOutputStream fileout = new FileOutputStream(new File(baseExcel+".xls"));
             Workbook ficheroWb = new HSSFWorkbook();
             Sheet sheet = ficheroWb.createSheet("VCSBPP");
+
             Row row = sheet.createRow(0);
-            row.createCell(0).setCellValue("Lower Bound");
-            row.createCell(1).setCellValue("Known Optimal");
-            row = sheet.createRow(1);
-            row.createCell(0).setCellValue(0.0);
-            row.createCell(1).setCellValue(0.0);
-
-            row = sheet.createRow(2);
-            row.createCell(0).setCellValue("Capacity");
-            row.createCell(1).setCellValue("Cost");
-            row.createCell(2).setCellValue("Weight");
-
-            int maxIterations = 0;
+            row.createCell(0).setCellValue("Bin Size");
+            row.createCell(1).setCellValue("Bin Cost");
+            row.createCell(2).setCellValue("Item Weight");
+            int maxIterations;
             if(capacity.size() > items.size()){
                 maxIterations = capacity.size();
             }else {
@@ -46,7 +39,7 @@ public class ExcelGenerator {
             }
 
             for (int x = 0; x < maxIterations; x++){
-                row = sheet.createRow(x+2);
+                row = sheet.createRow(x+1);
                 // Writing Bins
                 if (x < capacity.size()){
                     row.createCell(0).setCellValue(capacity.get(x));
