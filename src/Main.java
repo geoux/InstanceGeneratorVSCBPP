@@ -74,7 +74,7 @@ public class Main {
                         excelFolder.mkdirs();
                     if(!mpFolder.exists())
                         mpFolder.mkdirs();
-                    if(!mpFolder.exists())
+                    if(!zpFolder.exists())
                         zpFolder.mkdirs();
                     String setName = "generated/Excel/G"+(binGroup + 1)+"I"+(instanceID + 1)+"N"
                             +itemSets.get(instanceID).size()
