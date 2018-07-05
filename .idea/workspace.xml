@@ -7,11 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3823692-3639-4bbc-b9fa-285ef2c2924d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/AMPLGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/ZIMPLGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/ExcelTranslator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/Main.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,8 +35,8 @@
       <file leaf-file-name="AMPLGenerator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/utils/AMPLGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1505">
-              <caret line="134" column="78" selection-start-line="134" selection-start-column="78" selection-end-line="134" selection-end-column="78" />
+            <state relative-caret-position="383">
+              <caret line="59" column="72" lean-forward="true" selection-start-line="59" selection-start-column="72" selection-end-line="59" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -423,7 +420,7 @@
       <workItem from="1529704355160" duration="421000" />
       <workItem from="1529710361212" duration="1729000" />
       <workItem from="1530827749087" duration="39000" />
-      <workItem from="1530828740576" duration="3584000" />
+      <workItem from="1530828740576" duration="3766000" />
     </task>
     <task id="LOCAL-00001" summary="Working generator.&#10;Fixed: upper bound generation and cost function issues">
       <created>1524877965181</created>
@@ -481,11 +478,18 @@
       <option name="project" value="LOCAL" />
       <updated>1529712074554</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Enhacement: AMPL and ZIMPL generators&#10;Fixed: Bins quantity in AMPL file">
+      <created>1530832482379</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1530832482379</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126194000" />
+    <option name="totallyTimeSpent" value="126376000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1696" height="1026" extended-state="6" />
@@ -505,7 +509,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32894737" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49887386" visible="true" weight="0.19987775" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49887386" visible="true" weight="0.19987775" />
       <window_info anchor="right" id="Database" order="8" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.5574324" />
       <window_info id="Structure" order="1" sideWeight="0.5011261" side_tool="true" visible="true" weight="0.19987775" />
@@ -548,7 +552,8 @@
     <MESSAGE value="Fixed: Naming instances with more data" />
     <MESSAGE value="Fixed: Roulette wheel major fix and statistical distributions fixed to guarantee feasibility&#10;ToDo: improve the YML file including names instead numbers" />
     <MESSAGE value="Fixed: Excel translator and minor bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed: Excel translator and minor bugs" />
+    <MESSAGE value="Enhacement: AMPL and ZIMPL generators&#10;Fixed: Bins quantity in AMPL file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enhacement: AMPL and ZIMPL generators&#10;Fixed: Bins quantity in AMPL file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -908,8 +913,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/AMPLGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1505">
-          <caret line="134" column="78" selection-start-line="134" selection-start-column="78" selection-end-line="134" selection-end-column="78" />
+        <state relative-caret-position="383">
+          <caret line="59" column="72" lean-forward="true" selection-start-line="59" selection-start-column="72" selection-end-line="59" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
