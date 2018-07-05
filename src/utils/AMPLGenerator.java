@@ -1,30 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package utils;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
-/**
- *
- * @author g-ux
- */
-public class ExcelTranslator {
-    
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+
+public class AMPLGenerator {
+
     public static void Translate(String input, String output){
-        try 
+        try
         {
             FileWriter fw = new FileWriter(output);
             BufferedWriter bw = new BufferedWriter(fw);
@@ -57,9 +45,9 @@ public class ExcelTranslator {
             }
             varItem.add(";");
             itemsSet = itemsSet+";";
-            
-             //for the bins
-            row = sheet.getRow(3);
+
+            //for the bins
+            row = sheet.getRow(1);
             int j = 0;
             String binSet = "set I := ";
             List<String> binsCost = new ArrayList<>();
@@ -78,12 +66,12 @@ public class ExcelTranslator {
                 binsCost.add(tmpCost);
                 binsCap.add(tmpCap);
                 j++;
-                row = sheet.getRow(j+2);
+                row = sheet.getRow(j+1);
             }
             binsCap.add(";");
             binsCost.add(";");
             binSet = binSet+";";
-            
+
             title.print(binSet);
             title.println();
             title.print(itemsSet);
@@ -106,12 +94,12 @@ public class ExcelTranslator {
             }
             title.print("end;");
             title.println();
-            title.close();            
+            title.close();
         }
         catch (IOException ex)
         {
             System.out.println(ex.getMessage());
-        }        
+        }
     }
 
     private static PrintWriter printModel(PrintWriter p)
@@ -145,8 +133,6 @@ public class ExcelTranslator {
         p.println();
         p.println("s.t. capacity{i in I}: sum{j in J}w[j]*x[i,j]<= b[i]*y[i];");
         p.println("/* Items weight must not exceed selected Bin capacity */");
-        p.println();
-        p.println("solve;");
         p.println();
         return p;
     }

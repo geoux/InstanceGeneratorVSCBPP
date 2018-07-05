@@ -9,10 +9,10 @@ import generators.BinsGenerator;
 import generators.ItemsGenerator;
 import configuration.Configuration;
 import org.jetbrains.annotations.NotNull;
-import sun.security.util.BitArray;
+import utils.AMPLGenerator;
 import utils.ExcelGenerator;
-import utils.ExcelTranslator;
 import configuration.ItemSetConfiguration;
+import utils.ZIMPLGenerator;
 
 import java.io.File;
 import java.io.FileReader;
@@ -68,24 +68,34 @@ public class Main {
                 int instanceID = 0;
                 for(ArrayList<Double> itemSet : itemSets) {
                     File excelFolder = new File("generated/Excel");
-                    File mpFolder = new File("generated/MathProg");
+                    File mpFolder = new File("generated/AMPL");
+                    File zpFolder = new File("generated/ZIMPL");
                     if(!excelFolder.exists())
                         excelFolder.mkdirs();
                     if(!mpFolder.exists())
                         mpFolder.mkdirs();
+                    if(!mpFolder.exists())
+                        zpFolder.mkdirs();
                     String setName = "generated/Excel/G"+(binGroup + 1)+"I"+(instanceID + 1)+"N"
                             +itemSets.get(instanceID).size()
                             +returnIDName(config.itemsBySets.get(instanceID).getDistribution())
                             +"B"+binSetConfiguration.getBinsNumber()
                             +returnBDName(binSetConfiguration.getDistribution())
                             +returnCName(binSetConfiguration.getCostFuntionType());
-                    String mpName = "generated/MathProg/G"+(binGroup + 1)
+                    String mpName = "generated/AMPL/G"+(binGroup + 1)
                             +itemSets.get(instanceID).size()
                             +returnIDName(config.itemsBySets.get(instanceID).getDistribution())
                             +"B"+binSetConfiguration.getBinsNumber()
                             +returnBDName(binSetConfiguration.getDistribution())
                             +returnCName(binSetConfiguration.getCostFuntionType())
                             +".mod";
+                    String zpName = "generated/ZIMPL/G"+(binGroup + 1)
+                            +itemSets.get(instanceID).size()
+                            +returnIDName(config.itemsBySets.get(instanceID).getDistribution())
+                            +"B"+binSetConfiguration.getBinsNumber()
+                            +returnBDName(binSetConfiguration.getDistribution())
+                            +returnCName(binSetConfiguration.getCostFuntionType())
+                            +".zpl";
                     String baseExcel = setName+".xls";
                     ArrayList<Double> UpperBound = new ArrayList<>();
                     /* Check distribution parameters and fix it if worth it */
@@ -133,7 +143,8 @@ public class Main {
                     ArrayList<Double> binsCost = new ArrayList<>();
                     binsCost.addAll(bg.generateBinTypeCost(UpperBound,binSetConfiguration.getCostFuntionType(),binSetConfiguration.getCostFuntionParameters()));
                     ExcelGenerator.writeInExcel(UpperBound,binsCost, itemSet,setName);
-                    ExcelTranslator.Translate(baseExcel,mpName);
+                    AMPLGenerator.Translate(baseExcel,mpName);
+                    ZIMPLGenerator.CreateModel(baseExcel,zpName);
                     instanceID++;
                 }
                 binGroup++;
@@ -563,18 +574,21 @@ public class Main {
                 binsTypeUpperBound.clear();
                 binsTypeUpperBound.addAll(bg.generateUpperBound(binSetConfiguration,binsCapacity,itemSets.get(its)));
                 File excelFolder = new File("generated/Excel");
-                File mpFolder = new File("generated/MathProg");
+                File mpFolder = new File("generated/AMPL");
+                File zpFolder = new File("generated/ZIMPL");
                 if(!excelFolder.exists())
                     excelFolder.mkdirs();
                 if(!mpFolder.exists())
                     mpFolder.mkdirs();
+                if(!zpFolder.exists())
+                    zpFolder.mkdirs();
                 String setName = "generated/Excel/G"+group+"I"+its+"N"
                         +itemSets.get(its).size()
                         +returnIDName(config.itemsBySets.get(its).getDistribution())
                         +"B"+binSetConfiguration.getBinsNumber()
                         +returnBDName(binSetConfiguration.getDistribution())
                         +returnCName(binSetConfiguration.getCostFuntionType());
-                String mpName = "generated/MathProg/G"+group
+                String mpName = "generated/AMPL/G"+group
                         +"I"+its
                         +"N"+itemSets.get(its).size()
                         +returnIDName(config.itemsBySets.get(its).getDistribution())
@@ -582,9 +596,18 @@ public class Main {
                         +returnBDName(binSetConfiguration.getDistribution())
                         +returnCName(binSetConfiguration.getCostFuntionType())
                         +".mod";
+                String zpName = "generated/ZIMPL/G"+group
+                        +"I"+its
+                        +"N"+itemSets.get(its).size()
+                        +returnIDName(config.itemsBySets.get(its).getDistribution())
+                        +"B"+binSetConfiguration.getBinsNumber()
+                        +returnBDName(binSetConfiguration.getDistribution())
+                        +returnCName(binSetConfiguration.getCostFuntionType())
+                        +".zpl";
                 String baseExcel = setName+".xls";
                 ExcelGenerator.writeInExcel(binsTypeUpperBound,bg.generateBinTypeCost(binsTypeUpperBound,costFunction, binSetConfiguration.getCostFuntionParameters()), itemSets.get(its),setName);
-                ExcelTranslator.Translate(baseExcel,mpName);
+                AMPLGenerator.Translate(baseExcel,mpName);
+                ZIMPLGenerator.CreateModel(baseExcel,zpName);
                 its++;
             }
             config.getBinSet().add(binSetConfiguration);
