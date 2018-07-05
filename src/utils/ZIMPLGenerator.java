@@ -32,7 +32,7 @@ public class ZIMPLGenerator {
                 }else{
                     String lineEnding;
                     Row tmpRowItem = sheet.getRow(i + 2);
-                    if(tmpRowItem.getCell(2) != null){
+                    if(tmpRowItem != null && tmpRowItem.getCell(2) != null){
                         lineEnding = ",";
                     }else{
                         lineEnding = ";";
