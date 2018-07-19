@@ -59,7 +59,7 @@ public class Main {
             YamlReader reader = new YamlReader(new FileReader("configuration.yml"));
             Configuration config = (Configuration) reader.read();
             reader.close();
-            config.getItemsBySets().parallelStream().forEach(itemSetConfiguration -> itemSets.add(ig.generateItemsWithinRange(itemSetConfiguration)));
+            config.getItemsBySets().forEach(itemSetConfiguration -> itemSets.add(ig.generateItemsWithinRange(itemSetConfiguration)));
             config.getBinSet().forEach(binSetConfiguration -> binSetsCapacities.add(bg.generateBinsCapacities(binSetConfiguration)));
             out.println("Generating...");
             /***************** Generator section **************************/
