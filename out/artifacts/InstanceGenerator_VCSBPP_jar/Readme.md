@@ -31,10 +31,4 @@ Some of the characteristics that we think still need attention for the VSBPP are
 The generator works as we describe:
 
 
-Finally, this generator gives the instances in xls format, in order to be loaded with
-any high level programming language with and with a higher level of understanding the data.
- 
-Also, and as a plus, we would liked to add the same instances in MathProg format,
-ready to be loaded in any solver. We prefer GKPL, as it could be used in any OS, but
-there are many others more powerful but with commercial licence as CPLEX, XPRESS and 
-Gurobi. 
+Finally, this generator gives the instances in XLS, AMPL and ZIMPL formats.
