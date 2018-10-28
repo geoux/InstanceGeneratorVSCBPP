@@ -8,13 +8,45 @@
   <component name="ChangeListManager">
     <list default="true" id="e3823692-3639-4bbc-b9fa-285ef2c2924d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/InstanceGenerator_VCSBPP_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/InstanceGenerator_VCSBPP_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/g_ux.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/g_ux.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/commons_math3_3_6_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/commons_math3_3_6_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/poi_3_8_20120326.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/poi_3_8_20120326.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/yamlbeans_1_13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/yamlbeans_1_13.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/poi-examples-3.8-20120326.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/poi-excelant-3.8-20120326.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/poi-ooxml-3.8-20120326.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/poi-ooxml-schemas-3.8-20120326.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/poi-scratchpad-3.8-20120326.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InstanceGenerator-VCSBPP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/InstanceGenerator-VCSBPP.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/commons-math3-3.6.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/commons-math3-3.6.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/poi-3.8-20120326.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/poi-3.8-20120326.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/yamlbeans-1.13.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/yamlbeans-1.13.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/InstanceGenerator-VCSBPP.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/InstanceGenerator-VCSBPP.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/configuration/BinSetConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/configuration/BinSetConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/configuration/Configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/configuration/Configuration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/configuration/ItemSetConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/configuration/ItemSetConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/generators/BinsGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/generators/BinsGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/generators/ItemsGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/generators/ItemsGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/utils/ExcelGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/utils/ExcelGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/utils/RandomHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/utils/RandomHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/configuration/BinSetConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/configuration/BinSetConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/configuration/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/configuration/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/configuration/ItemSetConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/configuration/ItemSetConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generators/BinsGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generators/BinsGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generators/ItemsGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generators/ItemsGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/AMPLGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/AMPLGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/ExcelGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/ExcelGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/RandomHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/RandomHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/ZIMPLGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/ZIMPLGenerator.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,7 +73,7 @@
       <file leaf-file-name="ItemsGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/generators/ItemsGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
+            <state relative-caret-position="1827">
               <caret line="70" selection-start-line="70" selection-end-line="70" />
             </state>
           </provider>
@@ -50,7 +82,7 @@
       <file leaf-file-name="BinSetConfiguration.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/configuration/BinSetConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
+            <state relative-caret-position="1044">
               <caret line="49" column="15" selection-start-line="49" selection-start-column="15" selection-end-line="49" selection-end-column="15" />
               <folding>
                 <element signature="e#1177#1178#0" expanded="true" />
@@ -143,8 +175,8 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -188,7 +220,7 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="instancegenerator-vcsbpp" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/yamlbeans-1.13.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -249,53 +281,6 @@
       <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
-    </configuration>
-    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
-      <option name="BCName" value="" />
-      <option name="IOSSimulatorSdkPath" value="" />
-      <option name="adlOptions" value="" />
-      <option name="airProgramParameters" value="" />
-      <option name="appDescriptorForEmulator" value="Android" />
-      <option name="debugTransport" value="USB" />
-      <option name="debuggerSdkRaw" value="BC SDK" />
-      <option name="emulator" value="NexusOne" />
-      <option name="emulatorAdlOptions" value="" />
-      <option name="fastPackaging" value="true" />
-      <option name="fullScreenHeight" value="0" />
-      <option name="fullScreenWidth" value="0" />
-      <option name="launchUrl" value="false" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
-        </LauncherParameters>
-      </option>
-      <option name="mobileRunTarget" value="Emulator" />
-      <option name="moduleName" value="" />
-      <option name="overriddenMainClass" value="" />
-      <option name="overriddenOutputFileName" value="" />
-      <option name="overrideMainClass" value="false" />
-      <option name="runTrusted" value="true" />
-      <option name="screenDpi" value="0" />
-      <option name="screenHeight" value="0" />
-      <option name="screenWidth" value="0" />
-      <option name="url" value="http://" />
-      <option name="usbDebugPort" value="7936" />
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
     </configuration>
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
       <setting name="vmparams" value="" />
@@ -433,7 +418,8 @@
       <workItem from="1531690234982" duration="288000" />
       <workItem from="1531961963437" duration="215000" />
       <workItem from="1531962235764" duration="1386000" />
-      <workItem from="1540475493913" duration="498000" />
+      <workItem from="1540475493913" duration="651000" />
+      <workItem from="1540611153233" duration="53000" />
     </task>
     <task id="LOCAL-00001" summary="Working generator.&#10;Fixed: upper bound generation and cost function issues">
       <created>1524877965181</created>
@@ -526,18 +512,24 @@
       <option name="project" value="LOCAL" />
       <updated>1531963541534</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Refactor: Removed unused libraries">
+      <created>1540476151510</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1540476151510</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130407000" />
+    <option name="totallyTimeSpent" value="130613000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="134" y="35" width="3706" height="2125" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32894737" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
@@ -549,21 +541,22 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32894737" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4921171" visible="true" weight="0.17603911" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49182057" visible="true" weight="0.17593092" />
+      <window_info anchor="bottom" id="JProfiler" order="8" />
       <window_info anchor="right" id="Database" order="8" />
-      <window_info id="Structure" order="1" sideWeight="0.5078829" side_tool="true" visible="true" weight="0.17603911" />
+      <window_info id="Structure" order="1" sideWeight="0.5081794" side_tool="true" visible="true" weight="0.17593092" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.625" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32894737" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info id="Nl-Palette" order="2" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Properties" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="JProfiler" order="8" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24962178" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.5574324" />
     </layout>
@@ -597,7 +590,8 @@
     <MESSAGE value="Fixed: creating ZIMPL folder in loading from YML" />
     <MESSAGE value="Fixed: checking Items rows" />
     <MESSAGE value="Fixed: Parallel stream reading YML removed to get itemSet ordered" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed: Parallel stream reading YML removed to get itemSet ordered" />
+    <MESSAGE value="Refactor: Removed unused libraries" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor: Removed unused libraries" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -918,7 +912,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/configuration/BinSetConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
+        <state relative-caret-position="1044">
           <caret line="49" column="15" selection-start-line="49" selection-start-column="15" selection-end-line="49" selection-end-column="15" />
           <folding>
             <element signature="e#1177#1178#0" expanded="true" />
@@ -929,7 +923,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/generators/ItemsGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
+        <state relative-caret-position="1827">
           <caret line="70" selection-start-line="70" selection-end-line="70" />
         </state>
       </provider>
@@ -970,7 +964,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1012,6 +1006,18 @@
               <list>
                 <option value="0.2" />
                 <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>

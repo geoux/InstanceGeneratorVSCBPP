@@ -1,0 +1,17 @@
+!configuration.Configuration
+binSet: 
+-  UpperBoundType: 1
+   binsNumber: 3
+   costFuntionType: 3
+   distribution: 6
+   distributionParameters: 
+   - 50.0
+   - 100.0
+   - 150.0
+binsSetsNumber: 1
+itemsBySets: 
+-  distribution: 1
+   itemsNumber: 25
+   rangeEnd: 120.0
+   rangeInit: 20.0
+itemsSetsNumber: 1
