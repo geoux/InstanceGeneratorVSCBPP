@@ -107,7 +107,7 @@ public class BinsGenerator {
                     result.add(10*Math.sqrt(integer));
                     break;
                 case 4:
-                    result.add(0.1*Math.pow(integer,3/2));
+                    result.add(0.1*Math.sqrt(Math.pow(integer,3)));
                     break;
             }
         });

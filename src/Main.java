@@ -8,7 +8,6 @@ import configuration.BinSetConfiguration;
 import generators.BinsGenerator;
 import generators.ItemsGenerator;
 import configuration.Configuration;
-import org.jetbrains.annotations.NotNull;
 import utils.AMPLGenerator;
 import utils.ExcelGenerator;
 import configuration.ItemSetConfiguration;
@@ -713,12 +712,10 @@ public class Main {
         return result;
     }
 
-    @NotNull
     private static Double getHeavierItem(ArrayList<Double> items){
         return items.stream().max(Comparator.comparing(Double::doubleValue)).get();
     }
 
-    @NotNull
     private static Double getSmallerItem(ArrayList<Double> items){
         return items.stream().min(Comparator.comparing(Double::doubleValue)).get();
     }
