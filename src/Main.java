@@ -34,9 +34,12 @@ public class Main {
         out.println("");
         out.println("Generate instances using: ");
         out.println("[1] - Configuration file ");
-        out.println("[2] - New settings");
+        out.println("[2] - New settings (default)");
         Scanner tmp = new Scanner(in);
-        int option = tmp.nextInt();
+        int option = 2;
+        if(!tmp.nextLine().isEmpty()){
+            option = tmp.nextInt();
+        }
         switch (option){
             case 1:
                 generateFromExistingFile();
@@ -232,13 +235,10 @@ public class Main {
                 out.println("Use weight distribution? (Y|N)");
                 Scanner useDist = new Scanner(in);
                 if(useDist.nextLine().isEmpty() || useDist.nextLine().equals("N")){
-                    double ave = itemSetConfiguration.getRangeEnd() / itemSetConfiguration.getItemsNumber();
-                    itemSetConfiguration.setDistribution(2);
-                    itemSetConfiguration.getDistributionParameters().add(ave);
-                    itemSetConfiguration.getDistributionParameters().add(ave * 0.2);
+                    itemSetConfiguration.setDistribution(1);
                 }else{
                     out.println("Weight distribution: ");
-                    out.println("[1] - Uniform");
+                    out.println("[1] - Uniform (default)");
                     out.println("[2] - Normal");
                     out.println("[3] - Gamma");
                     out.println("[4] - Weibull");
@@ -246,7 +246,6 @@ public class Main {
                     out.print("Select your option: ");
                     Scanner itwd = new Scanner(in);
                     itemSetConfiguration.setDistribution(itwd.nextInt());
-
                     switch (itemSetConfiguration.getDistribution()){
                         case 2:
                             out.println("NORMAL DISTRIBUTION PARAMETERS");
@@ -328,7 +327,7 @@ public class Main {
             out.println("[3] - Gamma distribution");
             out.println("[4] - Weibull distribution");
             out.println("[5] - Discrete with increment in range");
-            out.println("[6] - Manual");
+            out.println("[6] - Manual (default)");
             out.print("Select your option: ");
             Scanner bctg = new Scanner(in);
             int binDist = 6;
@@ -515,16 +514,25 @@ public class Main {
                     break;
             }
 
-            out.println("Bin types cost function: ");
-            out.println("[1] - Linear");
-            out.println("[2] - Inverse");
-            out.println("[3] - Concave");
-            out.println("[4] - Convex");
-            out.print("Select your option: ");
-            Scanner bctf = new Scanner(in);
-            int costFunction = bctf.nextInt();
+            boolean selectedCF = false;
+            int costFunction = 1;
+            while(!selectedCF){
+                out.println("Bin types cost function: ");
+                out.println("[1] - Linear");
+                out.println("[2] - Concave");
+                out.println("[3] - Convex");
+                out.print("Select your option: ");
+                Scanner bctf = new Scanner(in);
+                if(bctf.nextLine().isEmpty()){
+                    out.print("You must select a cost function");
+                }else{
+                    costFunction = bctf.nextInt();
+                    selectedCF = true;
+                }
+            }
+
             binSetConfiguration.setCostFuntionType(costFunction);
-            if (binSetConfiguration.getCostFuntionType() == 1 || binSetConfiguration.getCostFuntionType() == 2){
+            if (binSetConfiguration.getCostFuntionType() == 1){
                 out.println("Set parameters for this type of cost function: ");
                 out.print("Pendent: ");
                 Scanner pend = new Scanner(in);
@@ -542,12 +550,17 @@ public class Main {
             String lb = lw.next();
             if (lb.equalsIgnoreCase( "Y")) {
                 out.println("Upper bound type: ");
-                out.println("[1] - Automatic");
+                out.println("[1] - Automatic (default)");
                 out.println("[2] - Stricted");
                 out.println("[3] - Fixed");
                 out.print("Select your option: ");
                 Scanner lwt = new Scanner(in);
-                lbType = lwt.nextInt();
+
+                if(lwt.nextLine().isEmpty()){
+                    lbType = 1;
+                }else{
+                    lbType = lwt.nextInt();
+                }
                 binSetConfiguration.setUpperBoundType(lbType);
             }else{
                 binSetConfiguration.setUpperBoundType(0);

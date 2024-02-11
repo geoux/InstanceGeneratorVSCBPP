@@ -6,19 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3823692-3639-4bbc-b9fa-285ef2c2924d" name="Default" comment="RC1 with distributions">
+    <list default="true" id="e3823692-3639-4bbc-b9fa-285ef2c2924d" name="Default" comment="Minor fixes on distribution selection">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/InstanceGenerator_VCSBPP_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/InstanceGenerator_VCSBPP_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/InstanceGenerator-VCSBPP.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/InstanceGenerator-VCSBPP.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/Readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/configuration/BinSetConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/configuration/BinSetConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/configuration/Configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/configuration/Configuration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/configuration/ItemSetConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/configuration/ItemSetConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/generators/BinsGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/generators/BinsGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/generators/ItemsGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/generators/ItemsGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/utils/ExcelGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/utils/ExcelGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/utils/RandomHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/utils/RandomHelper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generators/BinsGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generators/BinsGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,10 +84,10 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/media/geoux/Data/Workspace_IDEA/InstanceGenerator-VCSBPP",
+    "last_opened_file_path": "/media/geoux/Data/Workspace_IDEA/InstanceGenerator-VCSBPP/configuration.yml",
     "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -380,7 +375,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707600641254</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Minor fixes on distribution selection">
+      <created>1707650704614</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1707650704614</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Minor fixes on distribution selection">
+      <created>1707650723206</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1707650723206</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -426,7 +435,8 @@
     <MESSAGE value="Refactor: Removed unused libraries" />
     <MESSAGE value="Moved to Linux" />
     <MESSAGE value="RC1 with distributions" />
-    <option name="LAST_COMMIT_MESSAGE" value="RC1 with distributions" />
+    <MESSAGE value="Minor fixes on distribution selection" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes on distribution selection" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

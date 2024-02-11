@@ -100,13 +100,9 @@ public class BinsGenerator {
                     result.add(evaluated);
                     break;
                 case 2:
-                    double evaluatedInverse = 1 / ((parameters.get(0) * integer) + parameters.get(1));
-                    result.add(evaluatedInverse);
-                    break;
-                case 3:
                     result.add(10*Math.sqrt(integer));
                     break;
-                case 4:
+                case 3:
                     result.add(0.1*Math.sqrt(Math.pow(integer,3)));
                     break;
             }
