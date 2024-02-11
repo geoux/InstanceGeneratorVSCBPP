@@ -95,7 +95,7 @@ public class Main {
                             +returnBDName(binSetConfiguration.getDistribution())
                             +returnCName(binSetConfiguration.getCostFuntionType())
                             +".zpl";
-                    String baseExcel = setName+".xls";
+                    String baseExcel = setName+".xlsx";
                     ArrayList<Double> UpperBound = new ArrayList<>();
                     /* Check distribution parameters and fix it if worth it */
                     String fixMsg = "";
@@ -209,7 +209,8 @@ public class Main {
                 out.println("(For items with the same weight, write just one number without separator)");
                 Scanner itr = new Scanner(in);
                 String typed = itr.nextLine();
-                if (typed != ""){
+                typed = typed.trim();
+                if (!typed.isEmpty()){
                     range = typed.replace(" ","");
                     toSplit = range.indexOf("-");
                     ok = true;
@@ -228,60 +229,69 @@ public class Main {
                 }
             }
             if(itemSetConfiguration.getRangeInit() != itemSetConfiguration.getRangeEnd()){
-                out.println("Weight distribution: ");
-                out.println("[1] - Uniform");
-                out.println("[2] - Normal");
-                out.println("[3] - Gamma");
-                out.println("[4] - Weibull");
-                out.println("[5] - Roulette");
-                out.print("Select your option: ");
-                Scanner itwd = new Scanner(in);
-                itemSetConfiguration.setDistribution(itwd.nextInt());
+                out.println("Use weight distribution? (Y|N)");
+                Scanner useDist = new Scanner(in);
+                if(useDist.nextLine().isEmpty() || useDist.nextLine().equals("N")){
+                    double ave = itemSetConfiguration.getRangeEnd() / itemSetConfiguration.getItemsNumber();
+                    itemSetConfiguration.setDistribution(2);
+                    itemSetConfiguration.getDistributionParameters().add(ave);
+                    itemSetConfiguration.getDistributionParameters().add(ave * 0.2);
+                }else{
+                    out.println("Weight distribution: ");
+                    out.println("[1] - Uniform");
+                    out.println("[2] - Normal");
+                    out.println("[3] - Gamma");
+                    out.println("[4] - Weibull");
+                    out.println("[5] - Roulette");
+                    out.print("Select your option: ");
+                    Scanner itwd = new Scanner(in);
+                    itemSetConfiguration.setDistribution(itwd.nextInt());
 
-                switch (itemSetConfiguration.getDistribution()){
-                    case 2:
-                        out.println("NORMAL DISTRIBUTION PARAMETERS");
-                        out.println("Specify mean within range "+itemSetConfiguration.getRangeInit()+" - "+itemSetConfiguration.getRangeEnd());
-                        Scanner mean = new Scanner(in);
-                        itemSetConfiguration.getDistributionParameters().add(mean.nextDouble());
-                        out.println("Specify standard deviation: ");
-                        Scanner std = new Scanner(in);
-                        itemSetConfiguration.getDistributionParameters().add(std.nextDouble());
-                        break;
-                    case 3:
-                        out.println("GAMMA DISTRIBUTION PARAMETERS");
-                        out.println("(For shape = 1, gamma behaves as exponential distribution) ");
-                        out.println("Specify shape: ");
-                        Scanner shape = new Scanner(in);
-                        itemSetConfiguration.getDistributionParameters().add(shape.nextDouble());
-                        out.println("Specify scale: ");
-                        Scanner scale = new Scanner(in);
-                        itemSetConfiguration.getDistributionParameters().add(scale.nextDouble());
-                        break;
-                    case 4:
-                        out.println("WEIBULL DISTRIBUTION PARAMETERS");
-                        out.println("(For beta = 1, weibull behaves as exponential distribution and when beta > 1, it approximates to normal distribution) ");
-                        out.println("Specify alpha: ");
-                        Scanner alpha = new Scanner(in);
-                        itemSetConfiguration.getDistributionParameters().add(alpha.nextDouble());
-                        out.println("Specify beta: ");
-                        Scanner beta = new Scanner(in);
-                        itemSetConfiguration.getDistributionParameters().add(beta.nextDouble());
-                        break;
-                    case 5:
-                        out.println("ROULETTE WHEEL PARAMETERS");
-                        out.println("Probability by weight in percent (use integers in range 1 - 100): ");
-                        out.print("1 - For the heaviest: ");
-                        Scanner itwd1 = new Scanner(in);
-                        itemSetConfiguration.getRoulettePercentils().add(itwd1.nextInt());
-                        out.println("Available probability range so far: "+(100 - itemSetConfiguration.getRoulettePercentils().get(0))+"%");
-                        out.print("2 - For the medium ones: ");
-                        Scanner itwd2 = new Scanner(in);
-                        itemSetConfiguration.getRoulettePercentils().add(itwd2.nextInt());
-                        int rest = 100 - Math.abs(itemSetConfiguration.getRoulettePercentils().get(0) + itemSetConfiguration.getRoulettePercentils().get(1));
-                        out.println("3 - For the smallers: "+rest+"%");
-                        itemSetConfiguration.getRoulettePercentils().add(rest);
-                        break;
+                    switch (itemSetConfiguration.getDistribution()){
+                        case 2:
+                            out.println("NORMAL DISTRIBUTION PARAMETERS");
+                            out.println("Specify mean within range "+itemSetConfiguration.getRangeInit()+" - "+itemSetConfiguration.getRangeEnd());
+                            Scanner mean = new Scanner(in);
+                            itemSetConfiguration.getDistributionParameters().add(mean.nextDouble());
+                            out.println("Specify standard deviation: ");
+                            Scanner std = new Scanner(in);
+                            itemSetConfiguration.getDistributionParameters().add(std.nextDouble());
+                            break;
+                        case 3:
+                            out.println("GAMMA DISTRIBUTION PARAMETERS");
+                            out.println("(For shape = 1, gamma behaves as exponential distribution) ");
+                            out.println("Specify shape: ");
+                            Scanner shape = new Scanner(in);
+                            itemSetConfiguration.getDistributionParameters().add(shape.nextDouble());
+                            out.println("Specify scale: ");
+                            Scanner scale = new Scanner(in);
+                            itemSetConfiguration.getDistributionParameters().add(scale.nextDouble());
+                            break;
+                        case 4:
+                            out.println("WEIBULL DISTRIBUTION PARAMETERS");
+                            out.println("(For beta = 1, weibull behaves as exponential distribution and when beta > 1, it approximates to normal distribution) ");
+                            out.println("Specify alpha: ");
+                            Scanner alpha = new Scanner(in);
+                            itemSetConfiguration.getDistributionParameters().add(alpha.nextDouble());
+                            out.println("Specify beta: ");
+                            Scanner beta = new Scanner(in);
+                            itemSetConfiguration.getDistributionParameters().add(beta.nextDouble());
+                            break;
+                        case 5:
+                            out.println("ROULETTE WHEEL PARAMETERS");
+                            out.println("Probability by weight in percent (use integers in range 1 - 100): ");
+                            out.print("1 - For the heaviest: ");
+                            Scanner itwd1 = new Scanner(in);
+                            itemSetConfiguration.getRoulettePercentils().add(itwd1.nextInt());
+                            out.println("Available probability range so far: "+(100 - itemSetConfiguration.getRoulettePercentils().get(0))+"%");
+                            out.print("2 - For the medium ones: ");
+                            Scanner itwd2 = new Scanner(in);
+                            itemSetConfiguration.getRoulettePercentils().add(itwd2.nextInt());
+                            int rest = 100 - Math.abs(itemSetConfiguration.getRoulettePercentils().get(0) + itemSetConfiguration.getRoulettePercentils().get(1));
+                            out.println("3 - For the smallers: "+rest+"%");
+                            itemSetConfiguration.getRoulettePercentils().add(rest);
+                            break;
+                    }
                 }
                 items.addAll(ig.generateItemsWithinRange(itemSetConfiguration));
             }else{
@@ -321,7 +331,11 @@ public class Main {
             out.println("[6] - Manual");
             out.print("Select your option: ");
             Scanner bctg = new Scanner(in);
-            binSetConfiguration.setDistribution(bctg.nextInt());
+            int binDist = 6;
+            if(!bctg.nextLine().isEmpty()){
+                binDist = bctg.nextInt();
+            }
+            binSetConfiguration.setDistribution(binDist);
             boolean flag = false;
             switch (binSetConfiguration.getDistribution()){
                 case 1:
