@@ -6,14 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3823692-3639-4bbc-b9fa-285ef2c2924d" name="Default" comment="Moved to Linux">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/commons_math3_3_6_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/commons_math3_3_6_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="e3823692-3639-4bbc-b9fa-285ef2c2924d" name="Default" comment="RC1 with distributions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/AMPL/G1I0N25UnB3MaCc.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/Excel/G1I0N25UnB3MaCc.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/ZIMPL/G1I0N25UnB3MaCc.zpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/InstanceGenerator-VCSBPP.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/InstanceGenerator-VCSBPP.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/InstanceGenerator_VCSBPP_jar/Readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/configuration/BinSetConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/configuration/BinSetConfiguration.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/configuration/Configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/configuration/Configuration.class" afterDir="false" />
@@ -22,11 +18,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/generators/ItemsGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/generators/ItemsGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/utils/ExcelGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/utils/ExcelGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/utils/RandomHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InstanceGenerator-VCSBPP/utils/RandomHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generators/BinsGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generators/BinsGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/AMPLGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/AMPLGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/ZIMPLGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/ZIMPLGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +58,11 @@
         <option value="g-ux" />
       </list>
     </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -88,16 +85,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/media/geoux/Data/Workspace_IDEA/InstanceGenerator-VCSBPP&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/media/geoux/Data/Workspace_IDEA/InstanceGenerator-VCSBPP",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
@@ -376,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540744297417</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="RC1 with distributions">
+      <created>1707600641254</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1707600641254</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -421,7 +425,8 @@
     <MESSAGE value="Fixed: Parallel stream reading YML removed to get itemSet ordered" />
     <MESSAGE value="Refactor: Removed unused libraries" />
     <MESSAGE value="Moved to Linux" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved to Linux" />
+    <MESSAGE value="RC1 with distributions" />
+    <option name="LAST_COMMIT_MESSAGE" value="RC1 with distributions" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
