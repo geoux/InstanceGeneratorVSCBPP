@@ -28,8 +28,47 @@ Some of the characteristics that we think still need attention for the VSBPP are
 - Cost of bins are not related linearly with the capacity, thus smaller bins might be expensive that the bigger ones.
 - Different probability distributions for the items sizes that might increase the hardness of the packing methods
 
-The generator works as we describe:
-
+The generator for the Variable Size and Cost Bin Packing Problem has the following parameters:
+- Items weights distribution:
+  * [1] - Uniform (default)
+  * [2] - Normal
+      * a) Mean
+      * b) Standard deviation
+  * [3] - Gamma
+      * a) Shape
+      * b) Scale
+  * [4] - Weibull
+      * a) Alpha
+      * b) Beta
+  * [5] - Roulette (based on probability of occurrence, 1 - 100)
+      * a) Probability for the heaviest part of the set
+      * b) Probability for the medium part of the set
+      * c) Probability for the smallest part of the set
+- Bin types capacities distribution:
+  * [1] - Uniform distribution
+  * [2] - Normal distribution
+    * a) Mean
+    * b) Standard deviation
+  * [3] - Gamma distribution
+      * a) Shape
+      * b) Scale
+  * [4] - Weibull distribution
+      * a) Alpha
+      * b) Beta
+  * [5] - Discrete with increment in range
+      * a) Smallest bin type capacity
+      * b) Increment of the capacity
+  * [6] - Manual (default)
+      * a) One line for each capacity
+- Bin relation between cost and capacity
+  * [1] - Linear
+  * [2] - Concave
+  * [3] - Convex
+- Bin number by type bound:
+  * [1] - Automatic (default)
+  * [2] - Stricted
+  * [3] - Fixed
+The values of all the parameters should be set with those numbers in case of using an existing YML file.
 
 Finally, this generator gives the instances in xls format, in order to be loaded with
 any high level programming language with and with a higher level of understanding the data.
