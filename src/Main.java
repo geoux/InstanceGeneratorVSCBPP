@@ -234,7 +234,8 @@ public class Main {
             if(itemSetConfiguration.getRangeInit() != itemSetConfiguration.getRangeEnd()){
                 out.println("Use weight distribution? (Y|N)");
                 Scanner useDist = new Scanner(in);
-                if(useDist.nextLine().isEmpty() || useDist.nextLine().equals("N")){
+                String dist = useDist.nextLine();
+                if(dist.isEmpty() || dist.equalsIgnoreCase("N")){
                     itemSetConfiguration.setDistribution(1);
                 }else{
                     out.println("Weight distribution: ");
@@ -331,8 +332,9 @@ public class Main {
             out.print("Select your option: ");
             Scanner bctg = new Scanner(in);
             int binDist = 6;
-            if(!bctg.nextLine().isEmpty()){
-                binDist = bctg.nextInt();
+            String capt = bctg.nextLine();
+            if(!capt.isEmpty()){
+                binDist = Integer.parseInt(capt);
             }
             binSetConfiguration.setDistribution(binDist);
             boolean flag = false;
@@ -523,10 +525,11 @@ public class Main {
                 out.println("[3] - Convex");
                 out.print("Select your option: ");
                 Scanner bctf = new Scanner(in);
-                if(bctf.nextLine().isEmpty()){
+                String cpt = bctf.nextLine();
+                if(cpt.isEmpty()){
                     out.print("You must select a cost function");
                 }else{
-                    costFunction = bctf.nextInt();
+                    costFunction = Integer.parseInt(cpt);
                     selectedCF = true;
                 }
             }
@@ -545,9 +548,12 @@ public class Main {
             }
             int lbType = 0;
             int its = 0;
-            out.println("Generate upper bound? [Yes | No]: ");
+            out.println("Generate upper bound? [Y | N] (default Yes): ");
             Scanner lw = new Scanner(in);
-            String lb = lw.next();
+            String lb = lw.nextLine();
+            if(lb.isEmpty()){
+                lb = "Y";
+            }
             if (lb.equalsIgnoreCase( "Y")) {
                 out.println("Upper bound type: ");
                 out.println("[1] - Automatic (default)");
@@ -555,11 +561,11 @@ public class Main {
                 out.println("[3] - Fixed");
                 out.print("Select your option: ");
                 Scanner lwt = new Scanner(in);
-
-                if(lwt.nextLine().isEmpty()){
+                String cap = lwt.nextLine();
+                if(cap.isEmpty()){
                     lbType = 1;
                 }else{
-                    lbType = lwt.nextInt();
+                    lbType = Integer.parseInt(cap);
                 }
                 binSetConfiguration.setUpperBoundType(lbType);
             }else{
@@ -630,7 +636,7 @@ public class Main {
                         +returnBDName(binSetConfiguration.getDistribution())
                         +returnCName(binSetConfiguration.getCostFuntionType())
                         +".zpl";
-                String baseExcel = setName+".xls";
+                String baseExcel = setName+".xlsx";
                 ExcelGenerator.writeInExcel(binsTypeUpperBound,bg.generateBinTypeCost(binsTypeUpperBound,costFunction, binSetConfiguration.getCostFuntionParameters()), itemSets.get(its),setName);
                 AMPLGenerator.Translate(baseExcel,mpName);
                 ZIMPLGenerator.CreateModel(baseExcel,zpName);
@@ -770,9 +776,8 @@ public class Main {
     private static String returnCName(int c){
         switch (c){
             case 1: return "Li";
-            case 2: return "In";
-            case 3: return "Cc";
-            case 4: return "Cv";
+            case 2: return "Cc";
+            case 3: return "Cv";
         }
         return "NaN";
     }

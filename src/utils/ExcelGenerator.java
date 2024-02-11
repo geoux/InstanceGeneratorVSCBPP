@@ -23,7 +23,7 @@ public class ExcelGenerator {
 
     public static void writeInExcel(ArrayList<Double> capacity, ArrayList<Double> cost, ArrayList<Double> items, String baseExcel){
         try{
-            FileOutputStream fileout = new FileOutputStream(new File(baseExcel+".xls"));
+            FileOutputStream fileout = new FileOutputStream(new File(baseExcel+".xlsx"));
             Workbook ficheroWb = new HSSFWorkbook();
             Sheet sheet = ficheroWb.createSheet("VCSBPP");
 
